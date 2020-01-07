@@ -7,7 +7,7 @@
     // https://www.youtube.com/watch?v=L_wdRy7x4Sc
     site.partypartyparty = function(e) {
 	var partyers = document.getElementsByClassName('party');
-	for(var i=0; i<partyers.length; i++) {
+	for(var i=0; i < partyers.length; i++) {
             var r = Math.floor(Math.random()*255);
             var g = Math.floor(Math.random()*255);
             var b = Math.floor(Math.random()*255);
@@ -17,7 +17,7 @@
 	    if (Math.random()*100 > 99) {
 		e.innerText = 'PARTY! PARTY! PARTY!';
 	    }
-	    
+
 	    this.timeout = Math.max(this.timeout * 0.9, 50);
 	}
 
@@ -27,4 +27,3 @@
 }( window.site = window.site || {} ));
 
 site.partypartyparty();
-
