@@ -1,55 +1,64 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Pablo Romo's Corner</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway&family=Signika:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/site.css">
-    <script defer src="https://unpkg.com/css-doodle@0.8.5/css-doodle.min.js"></script>
-  </head>
-  <body>
-    <div class="head">
-        <div class="headtext">PABLO</div>
-        <div class="outer-rect"></div>
-    </div>
-    <div class="pages">
-      <css-doodle class="doodoo" onclick="update()">
-        :doodle {
-          @grid: 18 / inherit;
-          background: #0a0c27;
-        }
-        --hue: calc(180 + 1.5 * @row * @col);
-        background: hsl(var(--hue), 50%, 70%);
-        margin: -.5px;
-        transition: @r(.5s) ease;
-        clip-path: polygon(@pick(
-          '0 0, 100% 0, 100% 100%',
-          '0 0, 100% 0, 0 100%',
-          '0 0, 100% 100%, 0 100%',
-          '100% 0, 100% 100%, 0 100%'
-        ));
-      </css-doodle>
-      <div class="resume">
-        <a class:"inside-resume" href="#">resume</a>
-      </div>
-      <div class="projects">
-        <a href="/Projects/projects.html">projects</a>
-      </div>
-      <div class="about">
-        <a href="/About/about.html">about</a>
-      </div>
-      <div class="contact">
-        <a href="/Contact/contact.html">contact</a>
-      </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="index.js"></script>
+    <title>Hi, I'm Pablo!</title>
+</head>
+
+<!-- Notes
+
+    Make the background of the sections have different colored backgrounds
+    
+    Make them also have random scribbles to go along with the aesthetic set at the beginnig
+        Use cssdoodle to make the patterns of scribbles change every time the page is loaded
+
+-->
+
+<body>
+    <div class='sidenav'>
+        <a id='sidenav-1' href="#" class="sidenav-top">About</a>
+        <a id='sidenav-1' href="#">Education</a>
+        <a id='sidenav-1' href="#">Career</a>
+        <a id='sidenav-1' href="#">Expertise</a>
+        <a id='sidenav-1' href="#">Projects</a>
+        <a id='sidenav-1' href="#" class="sidenav-bottom">Contact</a>
     </div>
 
-    <!-- <h4>Welcome :)</h4>
-    <p>Ok, So below I have a couple of links to my other pages here. Mainly
-    they are just SPAs so that I can practice a bit of everyting. At some
-  point I hope to make this website look a bit nicer and have some dynamic
-features too! For now, I'm doing what I can.</p>
+    <div class='arrow bounce'></div>
 
-  <ul>
-      <li><a href='SPAs/spa1/spa1.html'>SPA1</a> A Simple JS Timer (Single Page Application)</li>
-  </ul> -->
-  </body>
+    <section class='head'>
+        <article class="blur">
+            <h1>Hi, I'm Pablo!</h1>
+            <h2>This is my Interactive Resume</h2>
+        </article>
+    </section>
+    <section class='about part'>
+        <h1>About</h1>
+        <article>
+
+        </article>
+    </section>
+    <section class="education part">
+        <h1>Education</h1>
+    </section>
+    <section class="career part">
+        <h1>Career</h1>
+    </section>
+    <section class="expertise part">
+        <h1>Expertise</h1>
+    </section>
+    <section class="projects part">
+        <h1>Projects</h1>
+    </section>
+    <section class="contact part">
+        <h1>Contact</h1>
+    </section>
+    
+</body>
 </html>
